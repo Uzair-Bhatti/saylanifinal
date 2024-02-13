@@ -1,0 +1,11 @@
+.navbar-end{
+    margin-left: -30px;
+}
+
+.button{
+    background-color: #fff;
+    font-size: 16px;
+    padding: 20px 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

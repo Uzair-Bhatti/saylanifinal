@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <!-- login container starts -->
+    <!-- <div class="container bg-base-content">
+        <div class="logo">
+            <img src="./logo.png" alt="stackoverflow logo">
+        </div>
+        <div class="user-details">
+            <input type="text" placeholder="Type here" class="input input-ghost w-full max-w-xs" /> 
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">Email</span>
+                </div>
+                <input type="text" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">Password</span>
+                </div>
+                <input type="text" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <div class="loginBtn">
+                <button class="btn btn-wide loginBtn">Login</button>
+            </div>
+            <div class="loginwithGoogle">
+                <button class="btn btn-wide">
+                    Login with Google
+                </button>
+            </div>
+            <p>Don't have an account? <a href="./signup.html">Sign up now</a></p>
+        </div>
+    </div> -->
+    <div class="w-full h-screen">
+      <div class="flex justify-center items-center h-screen Container">
+        <div class="logo">
+          <img
+            src="./asssets/logo-fotor-bg-remover-20240208222824.png"
+            alt="stackoverflow logo"
+          />
+        </div>
+
+        <input
+          type="text"
+          placeholder="Enter your email"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <input
+          type="text"
+          placeholder="Enter your password"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <!-- <button id="loginBtn" class="btn btn-wide">Loggin With Google</button> -->
+        <button
+          id="signinBtn"
+          class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg left"
+        >
+          Sign in
+        </button>
+        <button id="loginBtn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+          Sign in With Google
+        </button>
+        <p>Don't have a account?<a href="./signup.html">Signup</a> now</p>
+      </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

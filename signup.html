@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div class="w-full h-screen">
+      <div class="flex justify-center items-center h-screen Container">
+        <h1>Sign up In Stackoverflow!</h1>
+        <input
+          type="text"
+          placeholder="Enter your First Name"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <input
+          type="text"
+          placeholder="Enter your Last Name"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <input
+          type="text"
+          placeholder="Enter your Email"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <input
+          type="password"
+          id="password-field"
+          name="password"
+          placeholder="Enter your password"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <i class="eye-icon" id="toggle-password"></i>
+        <input
+          type="password"
+          id="password-field"
+          name="password"
+          placeholder="Confirm your password"
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <i class="eye-icon" id="toggle-password"></i>
+        <button id="signupBtn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+          Sign up
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

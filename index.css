@@ -1,0 +1,23 @@
+.search{
+    width: 500px;
+    padding: 0px 50px;
+}
+
+.navbar-end{
+    margin-right: 20px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn{
+    background-color: #fff;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input {
+    background-color: white;
+    margin: 0.5% 0;
+  }
