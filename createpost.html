@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./createpost.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lato:wght@100&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./createpost.css" />
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     <title>stackoverflow</title>
   </head>
   <body>
-    <div class="hm-pg w-full h-screen bg-gray-50">
+    <div class="post">
       <!-- navbar starts-->
 
       <div class="navbar">
@@ -21,12 +28,73 @@
         </div>
         <div class="navbar-end">
           <div class="login">
-            <button class="btn btn-outline button">Login</button>
+            <button class="button">Login</button>
           </div>
         </div>
       </div>
       <!-- navbar end --->
+
+      <!--header start -->
+      <div class="header">
+        <h2>Create Blog Or Ask Question</h2>
+      </div>
+      <!--header ends -->
+
+      <!--Post starts-->
+      <div class="header1">
+        <div class="header-left">
+          <h3>Title</h3>
+          <input type="text" placeholder="Enter Title" required="" />
+        </div>
+        <div class="header-right">
+          <h3>Select Category</h3>
+          <div class="dropdown">
+            <span>Select Category</span>
+            <div class="dropdown-content">
+              <p>Javascript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--type start-->
+      <div class="type">
+        <div class="type1">
+          <h3>Select Type</h3>
+          <input type="radio" />
+          <label>Blog</label>
+          <input type="radio" />
+          <label>Question</label>
+        </div>
+        <div class="type2">
+          <h3>Select Status</h3>
+          <input type="radio" />
+          <label>Active</label>
+          <input type="radio" />
+          <label>Inactive</label>
+        </div>
+      </div>
+      <!--type end-->
+
+      <!--description start-->
+      <div class="description">
+        <h3>Description</h3>
+        <textarea
+          placeholder="Quilt or Rich text editor"
+          rows="5"
+          cols="5"
+        ></textarea>
+      </div>
+      <!--description start-->
+
+      <!--button start-->
+      <div class="button">
+        <button class="button">Save</button>
+        <button class="button">Cancel</button>
+      </div>
+      <!--button end-->
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </body>
 </html>
