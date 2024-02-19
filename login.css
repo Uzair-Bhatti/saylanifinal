@@ -1,3 +1,4 @@
+
 .Container {
   background-color: #fff;
   flex-direction: column;
@@ -52,14 +53,14 @@
   text-decoration: underline;
 }
 
-.eye-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  #password-field {
-    position: relative;
-  }
+.show-password {
+  position: relative;
+  /* display: flex; */
+}
+.show-password i {
+  position: absolute;
+  right: 1.5rem;
+  top: 2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
