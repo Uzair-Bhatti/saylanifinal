@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lato:wght@100&family=Roboto&display=swap"
       rel="stylesheet"
@@ -27,8 +32,11 @@
           <img src="./asssets/download.png" alt="stackoverflow" />
         </div>
         <div class="navbar-end">
-          <div class="login">
-            <button class="button">Login</button>
+          <!-- <div class="login">
+            <button class="button" id="login">Login</button>
+          </div> -->
+          <div class="form-control">
+            <label id="uemail"></label>
           </div>
         </div>
       </div>
@@ -43,11 +51,11 @@
       <!--Post starts-->
       <div class="header1">
         <div class="header-left">
-          <h3>Title</h3>
+          <h3>Title:</h3>
           <input type="text" placeholder="Enter Title" required="" />
         </div>
         <div class="header-right">
-          <h3>Select Category</h3>
+          <!-- <h3>Select Category</h3> -->
           <div class="dropdown">
             <span>Select Category</span>
             <div class="dropdown-content">
@@ -61,40 +69,44 @@
       <!--type start-->
       <div class="type">
         <div class="type1">
-          <h3>Select Type</h3>
-          <input type="radio" />
+          <h3>Select Type:</h3>
+          <input type="radio" id="blog"checked />
           <label>Blog</label>
           <input type="radio" />
-          <label>Question</label>
+          <label id="question">Question</label>
         </div>
         <div class="type2">
-          <h3>Select Status</h3>
-          <input type="radio" />
+          <h3>Select Status:</h3>
+          <input type="radio" id="active" checked/>
           <label>Active</label>
-          <input type="radio" />
+          <input type="radio" id="inActive" />
           <label>Inactive</label>
         </div>
       </div>
       <!--type end-->
-
+      <div class="image-upload">
+        <h2>Upload Image</h2>
+        <input type="file" id="file" />
+      </div>
       <!--description start-->
       <div class="description">
-        <h3>Description</h3>
-        <textarea
+        <h3>Description:</h3>
+        <input
+          type="text"
           placeholder="Quilt or Rich text editor"
-          rows="5"
-          cols="5"
-        ></textarea>
+          class="text"
+          id="description"
+        />
       </div>
       <!--description start-->
 
       <!--button start-->
-      <div class="button">
-        <button class="button">Save</button>
-        <button class="button">Cancel</button>
+      <div class="btn">
+        <button class="button" id="save">Save</button>
+        <button class="button" id="cancel">Cancel</button>
       </div>
       <!--button end-->
     </div>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>

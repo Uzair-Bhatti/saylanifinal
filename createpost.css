@@ -1,5 +1,5 @@
 .post {
-  margin: 0 6%;
+  margin: 0 7%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -10,15 +10,20 @@
   align-items: center;
 }
 
+.navbar-start img{
+  mix-blend-mode: multiply;
+}
+
 .navbar-end {
   margin-left: -30px;
 }
 
 .button {
-  background-color: #fff;
+  background-color: #e7e7e700;
   font-size: 16px;
   padding: 10px 40px;
   border-radius: 15px;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -26,6 +31,9 @@
   text-decoration: underline;
   color: black;
   font-size: 20px;
+}
+.header{
+  margin-top: 2%;
 }
 
 .dropdown {
@@ -51,10 +59,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.2%;
 }
 input {
   padding: 10px;
   border-radius: 10px;
+  border: 2px solid black;
 }
 
 .header-right {
@@ -73,5 +83,14 @@ input {
 }
 
 .description {
+  margin-top: 1.5%;
   width: 100px;
+}
+
+.text{
+  width: 1000px;
+  height: 100px;
+}
+.btn{
+  margin-top: 2%;
 }

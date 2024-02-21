@@ -1,23 +1,121 @@
-.search{
-    width: 500px;
-    padding: 0px 50px;
+.container {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* margin-left: 5%; */
 }
-
+.navbar,
 .navbar-end{
-    margin-right: 20px;
-    gap: 10px;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn{
-    background-color: #fff;
-    font-size: 16px;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.navbar,
+.blog-section {
+  margin-left: 5%;
+}
+
+.search {
+  width: 500px;
+  padding: 0px 50px;
+}
+
+.navbar-end {
+  gap: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  font-size: 16px;
+  color: black;
+  padding: 15px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
 }
 
 .input {
-    background-color: white;
-    margin: 0.5% 0;
-  }
+  background-color: white;
+  margin: 0.5% 0;
+  height: 40px;
+  width: 250px;
+  border-radius: 15px;
+}
+
+.navbae-center img {
+  width: 2px;
+}
+
+.blog-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postHead{
+    padding: 6rem 0rem;
+    font-size: 3.5rem;
+    color:var(--btn-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+.post{
+    display: flex;
+    background-color: var(--primaryColor);
+    padding: 5rem;
+    border-radius: 01rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #FFC0D9;
+}
+.right{
+    width: 65%;
+}
+.right {
+    
+    color:var(--text-color);
+}
+.right h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+   
+}
+.right h1 {
+    color: var(--black);
+    font-weight: 500;
+}
+.right p{
+    font-size: 1.7rem;
+    padding: 2rem;
+}
+.read-more{
+    color: blue;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background:transparent;
+    display: inline-block;
+    border: none;
+}
+.read-more:hover{
+    color: purple;
+}
+.detail{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+    
+}
+.left{
+   
+    width: 35%;
+    height: 25rem;
+    border-radius: 0.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
