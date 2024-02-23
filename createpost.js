@@ -125,8 +125,8 @@ const createBlog = async () => {
 
   ///---- Get value of description  ----///
 
-  let description = document.getElementById("blog");
-  let descriptionVal = description.value;
+  let blog = document.getElementById("blog");
+  let blogVal = blog.value;
 
   ///--- Get Image from database----///
 
@@ -137,6 +137,8 @@ const createBlog = async () => {
     console.error("Error uploading image:", error);
     return; // Exit function if image upload fails
   }
+
+  ///----- Get username ---///
 
   const checkLogin2 = () => {
     onAuthStateChanged(auth, (user) => {
@@ -161,7 +163,7 @@ const createBlog = async () => {
       option: status,
       typeValue: typeVal,
       statusValue: statusVal,
-      description: descriptionVal,
+      blog: blogVal,
       imageUrl: imageUrl,
       date: id,
       userName: auth.currentUser.displayName,
