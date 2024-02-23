@@ -52,17 +52,18 @@
       <div class="header1">
         <div class="header-left">
           <h3>Title:</h3>
-          <input type="text" placeholder="Enter Title" required="" />
+          <input type="text" placeholder="Enter Title" required="" id="title"/>
         </div>
         <div class="header-right">
           <!-- <h3>Select Category</h3> -->
           <div class="dropdown">
-            <span>Select Category</span>
-            <div class="dropdown-content">
-              <p>Javascript</p>
-              <p>HTML</p>
-              <p>CSS</p>
-            </div>
+            <!-- <h2>Select Category</h2> -->
+            <select name="category" id="category" class="dropdown-content">
+              <option value="select ">Select Category</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="Javascript">Javascript</option>
+            </select>
           </div>
         </div>
       </div>
@@ -70,35 +71,35 @@
       <div class="type">
         <div class="type1">
           <h3>Select Type:</h3>
-          <input type="radio" id="blog"checked />
+          <input type="radio" name="type" id="blog"/>
           <label>Blog</label>
-          <input type="radio" />
-          <label id="question">Question</label>
+          <input type="radio" name="type" id="question"/>
+          <label>Question</label>
         </div>
         <div class="type2">
           <h3>Select Status:</h3>
-          <input type="radio" id="active" checked/>
+          <input type="radio" name="status" id="active"/>
           <label>Active</label>
-          <input type="radio" id="inActive" />
+          <input type="radio" name="status" id="inActive"/>
           <label>Inactive</label>
         </div>
       </div>
       <!--type end-->
       <div class="image-upload">
         <h2>Upload Image</h2>
-        <input type="file" id="file" />
+        <input type="file" id="file" class="file" />
       </div>
-      <!--description start-->
+      <!--blog start-->
       <div class="description">
         <h3>Description:</h3>
         <input
           type="text"
           placeholder="Quilt or Rich text editor"
           class="text"
-          id="description"
+          id="blog"
         />
       </div>
-      <!--description start-->
+      <!--blog start-->
 
       <!--button start-->
       <div class="btn">
@@ -108,5 +109,6 @@
       <!--button end-->
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./createpost.js" type="module"></script>
   </body>
 </html>

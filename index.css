@@ -44,7 +44,7 @@
   border-radius: 15px;
 }
 
-.navbae-center img {
+.navbar-center img {
   width: 2px;
 }
 
@@ -60,6 +60,7 @@
     color:var(--btn-color);
     text-transform: uppercase;
     text-align: center;
+    margin-right: 5%;
 }
 .post{
     display: flex;
@@ -68,13 +69,12 @@
     border-radius: 01rem;
     margin-bottom: 3rem;
     margin-top: 4rem;
-    box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #FFC0D9;
+    box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #05ec11;
 }
 .right{
     width: 65%;
 }
 .right {
-    
     color:var(--text-color);
 }
 .right h1 {
@@ -92,7 +92,7 @@
     padding: 2rem;
 }
 .read-more{
-    color: blue;
+    color: rgb(9, 82, 40);
     font-size: 1.4rem;
     cursor: pointer;
     background:transparent;
@@ -100,7 +100,7 @@
     border: none;
 }
 .read-more:hover{
-    color: purple;
+    color: rgb(11, 129, 60);
 }
 .detail{
     display: flex;

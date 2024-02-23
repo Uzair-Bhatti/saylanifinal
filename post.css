@@ -1,5 +1,5 @@
 .container {
-  margin: 0 6%;
+  margin: 0 7%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .button {
@@ -25,10 +26,114 @@
   cursor: pointer;
 }
 
-#btn {
+/* #btn {
   margin-left: 10px;
+} */
+
+/* .postsection{
+    margin: 0 15%;
+} */
+
+.post-section {
+  display: flex;
+  justify-content: center;
+  padding: 7rem 15rem;
 }
 
-.postsection{
-    margin: 0 15%;
+.text-section {
+  /* border: 0.2rem solid #FF0060;    */
+  border-radius: 1rem;
+  padding: 3rem;
+  background-color: var(--primaryColor);
+}
+.text-section div {
+  margin-bottom: 3rem;
+}
+.heading h1 {
+  font-size: 4.5rem;
+  margin: 3rem 0rem;
+  color: var(--black);
+}
+.paragraph p {
+  font-size: 1.6rem;
+  text-align: justify;
+  color: var(--text-color);
+}
+.images {
+  text-align: center;
+}
+.images img {
+  width: 80%;
+}
+.user-section {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+
+  font-size: 1.8rem;
+}
+
+.reply-section {
+  width: 100%;
+}
+.reply-section .head {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.4rem;
+}
+.reply-section textarea {
+  width: 100%;
+  outline: none;
+  padding: 3rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #d1d1d1;
+  margin-bottom: 2rem;
+}
+.reply-section button {
+  background-color: var(--btn-color);
+  color: black;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.reply-section button:hover {
+  background-color: black;
+  color: #ff0060;
+}
+.user-detail h2 {
+  margin: 2rem 0rem;
+  font-size: 1.7rem;
+}
+.image-name {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.users-name p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.user-image {
+  width: 5rem;
+}
+.user-image img {
+  border-radius: 50%;
+  width: 100%;
+}
+.comment p {
+  font-size: 1.7rem;
+}
+.like i {
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+.like i:hover {
+  color: #ff0060;
 }

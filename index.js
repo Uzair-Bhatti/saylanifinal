@@ -30,23 +30,48 @@ const chatCollectionRef = collection(db, "chats");
 ///---get elements from html---///
 const searchfield = document.getElementById("search");
 const writeBtn = document.getElementById("write");
-const loginBtn = document.getElementById("login");
+const logoutBtn = document.getElementById("logout");
+const userImg = document.getElementById("uimage");
+const searchBarBtn = document.getElementById("search");
 const currentPageName = window.location.pathname.split("/").pop();
 console.log(currentPageName);
 
+///-- user data starts---///
+const storeUserData = async (uid, displayName, photoURL, email) => {
+  try {
+    const userRef = doc(db, "users", uid);
+    const userSnapshot = await getDoc(userRef);
+
+    // Check if the user already exists
+    if (!userSnapshot.exists()) {
+      // If the user doesn't exist, add them to the "users" collection
+      const userData = {
+        displayName,
+        photoURL,
+        uid,
+        email,
+      };
+
+      await setDoc(userRef, userData);
+    }
+  } catch (error) {
+    console.error("Error storing user data:", error);
+  }
+};
+///--- user data ends----///
+
 ///---- write post start---///
-const post = (e) => {
+const writePost = (e) => {
   e.preventDefault();
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       const uid = user.uid;
-      if (currentPageName !== "" && currentPageName !== "createpost.html") {
-        window.location.href = "createpost.html";
-      }
+
+      window.location.href = "createpost.html";
 
       // ...
-    } else {
+    } else if (!user) {
       window.location.href = "login.html";
       alert("Please login first");
       // User is signed out
@@ -55,7 +80,7 @@ const post = (e) => {
   });
 };
 
-writeBtn && writeBtn.addEventListener("click", post);
+writeBtn && writeBtn.addEventListener("click", writePost);
 ///---- write post end----///
 
 const checkLogin2 = () => {
@@ -69,15 +94,22 @@ const checkLogin2 = () => {
 
 checkLogin2();
 
-///---loginBtn function start---///
-const login = () => {
-  if (currentPageName === "index.html") {
-    window.location.href = "login.html";
-  }
+///---logout function start---///
+const logout = () => {
+  signOut(auth)
+  .then(() => {
+    // Sign-out successful.
+    if(currentPage !=="index.html"){
+      window.location.href="index.html"
+    }
+   console.log("signout")
+  }).catch((error) => {
+    // An error happened.
+  });
 };
 
-loginBtn && loginBtn.addEventListener("click", login);
-///---loginBtn function ---///
+logoutBtn && logoutBtn.addEventListener("click", logout);
+///---loginBtn function end---///
 
 ///---- blog start----///
 const blogHead = document.getElementById("postHead");
@@ -98,10 +130,10 @@ const months = [
 const maxLengh = 100;
 
 const truncateText = (text, maxLengh) => {
-  if (text.length <= 70) {
+  if (text.length <= maxLengh) {
     return text;
   }
-  return text.slice(0, 70) + "....";
+  return text.slice(0, 100) + "....";
 };
 
 const loadBlog = () => {
@@ -119,9 +151,12 @@ const loadBlog = () => {
 
         let years = date.getFullYear();
 
+        const photoURL = blogEl.photoURL;
+        const displayName = blogEl.displayName;
+
         const formattedTime = `${day}-${month}-${years}`;
 
-        const truncatedDescription = truncateText(blogEl.description, 100);
+        const truncatedDescription = truncateText(blogEl.description, maxLengh);
 
         return `
 <div class="post">
@@ -129,18 +164,39 @@ const loadBlog = () => {
                 <h1>${blogEl.title}</h1>
              
                 <p id="description-${docs.id}">${truncatedDescription}</p>
-                 <button  class="read-more onclick="expandText('${docs.id}')">Read More</button>
+                 <button  class="read-more onclick="expandText('${
+                   docs.id
+                 }')">Read More</button>
                     <div class="detail">
-                        <p>${blogEl.userName}</p>
+                        <p>${(photoURL, displayName)}</p>
                         <p>${formattedTime}</p>
                     </div>
             </div> 
-            <div class="left" style= "background-image: url(${blogEl.imageUrl}) "><a href=${blogEl.imageUrl}></a></div>
+            <div class="left" style= "background-image: url(${
+              blogEl.imageUrl
+            }) "><a href=${blogEl.imageUrl}></a></div>
         </div>`;
       })
       .join("");
-
-    blogHead.innerHTML = Blogs;
+    post.innerHTML = Blogs;
   });
 };
 loadBlog();
+///--- blog end---///
+
+///---search  bar starts--////
+searchBarBtn &&
+  searchBarBtn.addEventListener("keyup", (event) => {
+    const searchValue = event.target.value.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    let searchBarHTML = `<ul class="menu bg-base-200 w-56 rounded-box">`;
+    blogEl.forEach((blogEl) => {
+      const blogTitle = blogEl.title.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+
+      if (blogTitle.includes(searchValue)) {
+        searchBarHTML += `<li><a>${blog.title}</a></li>`;
+        // console.log(blog.title);
+      }
+    });
+    searchBarHTML += `</ul>`;
+    console.log(searchBarHTML);
+  });

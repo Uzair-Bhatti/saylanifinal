@@ -10,10 +10,6 @@
   align-items: center;
 }
 
-.navbar-start img{
-  mix-blend-mode: multiply;
-}
-
 .navbar-end {
   margin-left: -30px;
 }
@@ -32,7 +28,7 @@
   color: black;
   font-size: 20px;
 }
-.header{
+.header {
   margin-top: 2%;
 }
 
@@ -42,17 +38,13 @@
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
+  /* display: none; */
+  /* position: absolute; */
   background-color: #f9f9f9;
   min-width: 260px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .header1 {
@@ -82,15 +74,19 @@ input {
   margin-right: 15%;
 }
 
+.file {
+  border: none;
+}
+
 .description {
   margin-top: 1.5%;
   width: 100px;
 }
 
-.text{
+.text {
   width: 1000px;
   height: 100px;
 }
-.btn{
+.btn {
   margin-top: 2%;
 }
